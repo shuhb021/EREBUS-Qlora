@@ -79,7 +79,6 @@ def CloseNotepad():
         Speak("I have closed Notepad for you")
     except:
         Speak("Sorry, I could not close Notepad")
-
 def TypeInNotepadVoice():
     global typing_active
     typing_active = True
@@ -98,7 +97,7 @@ def TypeInNotepadText(text):
     Speak("Typing in Notepad for you")
     time.sleep(1)
     pyautogui.typewrite(text + "\n", interval=0.05)
-
+    
 def OpenChrome():
     try:
         chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
@@ -250,9 +249,9 @@ def add_message(msg):
     chat_display.insert("end", msg + "\n")
     chat_display.configure(state="disabled")
     chat_display.see("end")
-#__________________________________________________
+#_________________________
 #APP UI
-#__________________________________________________
+#_________________________
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -277,3 +276,4 @@ btn_exit.grid(row=0, column=1, padx=10)
 threading.Thread(target=Wish).start()
 
 root.mainloop()
+
