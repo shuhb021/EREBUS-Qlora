@@ -240,7 +240,6 @@ def run_sympto():
     query = Listen()
     if query:
         handle_query(query)
-
 def start_sympto():
     threading.Thread(target=run_sympto).start()
 
@@ -252,7 +251,6 @@ def add_message(msg):
 #_________________________
 #APP UI
 #_________________________
-
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
@@ -272,8 +270,8 @@ btn_speak.grid(row=0, column=0, padx=10)
 btn_exit = ctk.CTkButton(btn_frame, text="❌ Exit", command=root.quit)
 btn_exit.grid(row=0, column=1, padx=10)
 
-# Start with a greeting
 threading.Thread(target=Wish).start()
 
 root.mainloop()
+
 
